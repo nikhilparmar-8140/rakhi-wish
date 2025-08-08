@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fbd3e9, #bb377d);
+  color: #fff;
+  text-align: center;
+}
+
+/* Home Page */
+.home .container {
+  padding: 100px 20px;
+  animation: fadeIn 2s ease-in;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #fff;
+  color: #bb377d;
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Message Page */
+.message-title {
+  margin: 40px 0;
+  font-size: 36px;
+  animation: slideIn 1s ease;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  color: #bb377d;
+  padding: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #fff;
+  color: #333;
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 700px;
+  text-align: left;
+  animation: zoomIn 0.6s ease;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.popup-content img {
+  width: 200px;
+  height: auto;
+  border-radius: 15px;
+}
+
+.popup-content p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.close-btn {
+  margin-top: 20px;
+  background: #bb377d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+
